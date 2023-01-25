@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .scrollbar-thin::-webkit-scrollbar {
 	width: 10px;
 	height: 10px;
@@ -20,4 +19,12 @@
 
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
 	background: #f70303;
+}
+
+.inset-shadow {
+	box-shadow: inset 2px -2px 3px 0px #0fa890;
+}
+
+html {
+	font-family: 'Noto Sans';
 }

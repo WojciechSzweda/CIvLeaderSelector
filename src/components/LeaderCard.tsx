@@ -13,7 +13,7 @@ const LeaderCard = ({
 	disabled?: boolean
 }) => {
 	return (
-		<label className="cursor-pointer">
+		<label className={`cursor-pointer ${disabled ? 'cursor-default' : ''}`}>
 			<section
 				className="flex items-center m-2 px-2 py-1 border-solid border-2 rounded-md gap-2"
 				style={{ background: '#082c4a', borderColor: '#144870' }}

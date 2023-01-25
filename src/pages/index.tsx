@@ -30,7 +30,7 @@ const Home: NextPage = () => {
 				style={{ backgroundImage: 'url(./background.png)' }}
 			>
 				{ rolledIds.length
-					? <LeaderRolled rolledIds={rolledIds} />
+					? <LeaderRolled rolledIds={rolledIds} onBack={() => setRolledIds([])} />
 					: <LeaderSelection onRoll={setRolledIds} />
 				}
 			</main>
