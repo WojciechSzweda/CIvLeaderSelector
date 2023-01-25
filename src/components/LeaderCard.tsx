@@ -22,7 +22,7 @@ const LeaderCard = ({
 					<input type="checkbox" checked={isSelected} onChange={() => onSelect?.(leader.id, !isSelected)} />
 				}
 				<Image
-					className="bg-green-300 max-w-[50px] w-[50px] max-h-[50px] h-[50px] rounded-full"
+					className="bg-green-300 max-w-[50px] w-[50px] max-h-[50px] h-[50px] rounded-full border-2 border-[#80715c]"
 					src={leader.url}
 					alt=""
 					width={50}
