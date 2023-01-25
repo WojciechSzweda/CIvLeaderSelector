@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.scrollbar-thin {
+	scrollbar-width: thin;
+	scrollbar-color: #27547e #07243c;
+}
+
 .scrollbar-thin::-webkit-scrollbar {
 	width: 10px;
 	height: 10px;
@@ -9,16 +14,16 @@
 
 .scrollbar-thin::-webkit-scrollbar-track {
 	border-radius: 20px;
-	background: #f7f4ed;
+	background: #07243c;
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
-	background: #f70303;
-	border: 3px solid #f6f7ed;
+	background: #27547e;
+	border: 3px solid #07243c;
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-	background: #f70303;
+	background: #27547e;
 }
 
 .inset-shadow {
