@@ -319,5 +319,10 @@ export const leaders: ILeader[] = [
 		'url': 'https://static.wikia.nocookie.net/civilization/images/5/5a/Yongle_%28Civ6%29.png',
 		'name': 'Yongle',
 		'id': 63
+	},
+	{
+		'url': 'https://static.wikia.nocookie.net/civilization/images/5/56/Sundiata_Keita_(Civ6).png',
+		'name': 'Sundiata Keita',
+		'id': 64
 	}
-]
+].sort((a,b) => a.name.localeCompare(b.name))
