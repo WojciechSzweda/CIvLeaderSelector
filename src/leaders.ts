@@ -236,7 +236,7 @@ export const leaders: ILeader[] = [
 		'id': 46
 	},
 	{
-		'url': 'https://static.wikia.nocookie.net/civilization/images/6/62/Ramses_%28Civ6%29.png',
+		'url': 'https://static.wikia.nocookie.net/civilization/images/9/91/Ramses_II_(Civ6).png',
 		'name': 'Ramses',
 		'id': 47
 	},
