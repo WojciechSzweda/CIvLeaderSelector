@@ -326,12 +326,7 @@ export const leaders: ILeader[] = [
 		'name': 'Sundiata Keita',
 		'id': 64
 	},
-	{
-		'url': 'https://static.wikia.nocookie.net/civilization/images/5/56/Sundiata_Keita_(Civ6).png',
-		'name': 'Sundiata Keita',
-		'id': 64
-	},
-
+	
 	{
 		name: 'Catherine de Medici (Black Queen)',
 		url: 'https://static.wikia.nocookie.net/civilization/images/0/06/Catherine_de_Medici_%28Civ6%29.png',
