@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import type { ILeader} from '../leaders';
 import { leaders } from '../leaders'
 import LeaderCard from './LeaderCard'
+import LeaderSave from './LeaderSave';
 
 function getLeaders() {
 	const overrides = leaders.filter(leader => leader.overrides).map(leader => leader.overrides) as number[]
@@ -47,7 +48,7 @@ const LeaderSelection = ({ onRoll }: { onRoll: (ids: number[]) => void }) => {
 			setQuantityInputValue(Number(e.target.value))
 		}
 	}
-	
+
 	return <>
 		<div className="justify-center flex gap-4">
 			<div className="hover:bg-[#0e83a0] bg-[#0f4066]">
@@ -56,6 +57,7 @@ const LeaderSelection = ({ onRoll }: { onRoll: (ids: number[]) => void }) => {
 			<div className="hover:bg-[#0e83a0] bg-[#0f4066]">
 				<button className="bg-[#09365d] px-2 m-1 text-white border-[#082c4b] border" onClick={unselectAll}>None</button>
 			</div>
+			<LeaderSave selectedLeaderIds={selectedLeaderIds} onLoad={(ids) => setSelectedLeaderIds(ids)} />
 		</div>
 		<div className="grid lg:grid-cols-4 sm:grid-cols-2 overflow-y-auto scrollbar-thin">
 			{getLeaders().map(leader =>
