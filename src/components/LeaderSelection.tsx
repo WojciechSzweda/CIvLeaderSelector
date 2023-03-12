@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import type { ILeader} from '../leaders';
 import { leaders } from '../leaders'
 import LeaderCard from './LeaderCard'
@@ -11,7 +11,8 @@ function getLeaders() {
 const LeaderSelection = ({ onRoll }: { onRoll: (ids: number[]) => void }) => {
 
 	const [selectedLeaderIds, setSelectedLeaderIds] = useState<number[]>(leaders.map(x => x.id))
-	const [quantity, setQuantity] = useState<number>(1)
+	const [quantityInputValue, setQuantityInputValue] = useState<number | null>(1)
+	const quantity = useMemo(() => Number(quantityInputValue), [quantityInputValue])
 	function onSelect(leaderId: number, checked: boolean) {
 		if (checked) {
 			setSelectedLeaderIds([...selectedLeaderIds, leaderId])
@@ -39,7 +40,12 @@ const LeaderSelection = ({ onRoll }: { onRoll: (ids: number[]) => void }) => {
 		onRoll(Array.from({ length: quantity }).map(rollLeaderId))
 	}
 	function onQuantityInput(e: React.ChangeEvent<HTMLInputElement>) {
-		setQuantity(Number(e.target.value))
+		const value = e.target.value
+		if (value === '') {
+			setQuantityInputValue(null)
+		} else {
+			setQuantityInputValue(Number(e.target.value))
+		}
 	}
 	
 	return <>
@@ -60,8 +66,10 @@ const LeaderSelection = ({ onRoll }: { onRoll: (ids: number[]) => void }) => {
 			<label className="text-white">Quantity
 				<input
 					className="border-red-600 border-solid border text-black ml-1 valid:border-gray-600"
-					step="1" value={quantity} type="number" min="1" max={selectedLeaderIds.length} onInput={onQuantityInput}
+					step="1" value={quantityInputValue ?? undefined} type="number" min="1" max={selectedLeaderIds.length} onInput={onQuantityInput}
+					required
 				/>
+				{ quantityInputValue }
 			</label>
 			<div className="bg-gold-dark border-2 border-gold">
 				<button
