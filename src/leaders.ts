@@ -2,6 +2,7 @@ export interface ILeader {
 	name: string
 	url: string
 	id: number
+	overrides?: number
 }
 
 export const leaders: ILeader[] = [
@@ -324,5 +325,94 @@ export const leaders: ILeader[] = [
 		'url': 'https://static.wikia.nocookie.net/civilization/images/5/56/Sundiata_Keita_(Civ6).png',
 		'name': 'Sundiata Keita',
 		'id': 64
-	}
+	},
+	{
+		'url': 'https://static.wikia.nocookie.net/civilization/images/5/56/Sundiata_Keita_(Civ6).png',
+		'name': 'Sundiata Keita',
+		'id': 64
+	},
+
+	{
+		name: 'Catherine de Medici (Black Queen)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/0/06/Catherine_de_Medici_%28Civ6%29.png',
+		id: 65,
+		overrides: 7,
+	},
+	
+	{
+		name: 'Catherine de Medici (Magnificence)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/e/e2/Catherine_de_Medici_%28Magnificence%29_%28Civ6%29.png',
+		id: 66,
+		overrides: 7,
+	},
+	
+	{
+		name: 'Cleopatra (Egyptian)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/9/98/Cleopatra_%28Civ6%29.png',
+		id: 67,
+		overrides: 9,
+	},
+	
+	{
+		name: 'Cleopatra (Ptolemaic)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/0/0f/Cleopatra_%28Ptolemaic%29_%28Civ6%29.png',
+		id: 68,
+		overrides: 9,
+	},
+	
+	{
+		name: 'Qin Shi Huang (Mandate of Heaven)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/c/c3/Qin_Shi_Huang_%28Civ6%29.png',
+		id: 69,
+		overrides: 46,
+	},
+	
+	{
+		name: 'Qin Shi Huang (Unifier)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/0/00/Qin_Shi_Huang_%28Unifier%29_%28Civ6%29.png',
+		id: 70,
+		overrides: 46,
+	},
+	
+	{
+		name: 'Saladin (Sultan)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/8/82/Saladin_%28Sultan%29_%28Civ6%29.png',
+		id: 71,
+		overrides: 49,
+	},
+	
+	{
+		name: 'Saladin (Vizier)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/5/57/Saladin_%28Civ6%29.png',
+		id: 72,
+		overrides: 49,
+	},
+	
+	{
+		name: 'Suleiman (Kanuni)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/8/85/Suleiman_%28Civ6%29.png',
+		id: 73,
+		overrides: 53,
+	},
+	
+	{
+		name: 'Suleiman (Muhteşem)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/d/d0/Suleiman_%28Muhte%C5%9Fem%29_%28Civ6%29.png',
+		id: 74,
+		overrides: 53,
+	},
+	
+	{
+		name: 'Teddy Roosevelt (Bull Moose)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/7/70/Teddy_Roosevelt_%28Civ6%29.png',
+		id: 75,
+		overrides: 55,
+	},
+	
+	{
+		name: 'Teddy Roosevelt (Rough Rider)',
+		url: 'https://static.wikia.nocookie.net/civilization/images/c/c3/Teddy_Roosevelt_%28Rough_Rider%29_%28Civ6%29.png',
+		id: 76,
+		overrides: 55,
+	},
 ].sort((a,b) => a.name.localeCompare(b.name))

@@ -3,6 +3,11 @@ import type { ILeader} from '../leaders';
 import { leaders } from '../leaders'
 import LeaderCard from './LeaderCard'
 
+function getLeaders() {
+	const overrides = leaders.filter(leader => leader.overrides).map(leader => leader.overrides) as number[]
+	return leaders.filter(x => !overrides.includes(x.id))
+}
+
 const LeaderSelection = ({ onRoll }: { onRoll: (ids: number[]) => void }) => {
 
 	const [selectedLeaderIds, setSelectedLeaderIds] = useState<number[]>(leaders.map(x => x.id))
@@ -47,7 +52,7 @@ const LeaderSelection = ({ onRoll }: { onRoll: (ids: number[]) => void }) => {
 			</div>
 		</div>
 		<div className="grid lg:grid-cols-4 sm:grid-cols-2 overflow-y-auto scrollbar-thin">
-			{leaders.map(leader =>
+			{getLeaders().map(leader =>
 				<LeaderCard leader={leader} key={leader.name} isSelected={isSelected(leader)} onSelect={onSelect} />
 			)}
 		</div>
