@@ -69,7 +69,6 @@ const LeaderSelection = ({ onRoll }: { onRoll: (ids: number[]) => void }) => {
 					step="1" value={quantityInputValue ?? undefined} type="number" min="1" max={selectedLeaderIds.length} onInput={onQuantityInput}
 					required
 				/>
-				{ quantityInputValue }
 			</label>
 			<div className="bg-gold-dark border-2 border-gold">
 				<button
