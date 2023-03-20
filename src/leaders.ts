@@ -66,11 +66,11 @@ export const leaders: ILeader[] = [
 		'name': 'Eleanor of Aquitaine',
 		'id': 12
 	},
-	{
-		'url': 'https://static.wikia.nocookie.net/civilization/images/d/d4/Elizabeth_%28Civ6%29.png',
-		'name': 'Elizabeth',
-		'id': 13
-	},
+	// {
+	// 	'url': 'https://static.wikia.nocookie.net/civilization/images/d/d4/Elizabeth_%28Civ6%29.png',
+	// 	'name': 'Elizabeth',
+	// 	'id': 13
+	// },
 	{
 		'url': 'https://static.wikia.nocookie.net/civilization/images/4/44/Frederick_Barbarossa_%28Civ6%29.png',
 		'name': 'Frederick Barbarossa',
@@ -409,5 +409,20 @@ export const leaders: ILeader[] = [
 		url: 'https://static.wikia.nocookie.net/civilization/images/c/c3/Teddy_Roosevelt_%28Rough_Rider%29_%28Civ6%29.png',
 		id: 76,
 		overrides: 55,
+	},
+	{
+		name: 'Ludwig II',
+		url: 'https://static.wikia.nocookie.net/civilization/images/b/b5/Ludwig_II_(Civ6).png',
+		id: 77,
+	},
+	{
+		name: 'Sejong',
+		url: 'https://static.wikia.nocookie.net/civilization/images/b/b8/Sejong_(Civ6).png',
+		id: 78,
+	},
+	{
+		name: 'Theodora ',
+		url: 'https://static.wikia.nocookie.net/civilization/images/1/18/Theodora_(Civ6).png',
+		id: 79,
 	},
 ].sort((a,b) => a.name.localeCompare(b.name))
